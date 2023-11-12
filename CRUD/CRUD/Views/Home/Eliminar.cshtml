@@ -1,0 +1,46 @@
+﻿@model CRUD.Models.Producto
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<div class=" row">
+    <div class=" col-sm-4">
+        <form asp-action="Eliminar" asp-controller="Home" method="post">
+            <input type="hidden" asp-for="Id" />
+
+
+            <div class=" mb-2">
+                <label class=" col-form-label" asp-for="Nombre">Nombre Del Producto</label>
+                <input class="form-control form-control-sm" asp-for="Nombre" type="text" />
+            </div>
+
+
+            <div class=" mb-2">
+                <label class=" col-form-label" asp-for="Categoria">Categoria Del Producto</label>
+                <input class="form-control form-control-sm" asp-for="Categoria" type="text" />
+            </div>
+
+            <div class=" mb-2">
+                <label class=" col-form-label" asp-for="Precio">Precio Del Producto</label>
+                <input class="form-control form-control-sm" asp-for="Precio" type="text" />
+            </div>
+            <div class=" mb-2">
+
+                <button class=" btn btn-primary btn-sm w-25" type="submit">
+                    eliminar>
+
+                   
+            </div>
+            <a></a>
+            <div class=" mb-2">
+             
+               
+                    
+                <a class=" btn btn-dark btn-sm" asp-action="Index" asp-controller="Home">volver</a>
+            </div>
+        </form>
+    </div>
+</div>

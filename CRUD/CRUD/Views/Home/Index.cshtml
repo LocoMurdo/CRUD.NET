@@ -1,0 +1,43 @@
+﻿@model List<CRUD.Models.Producto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class=" card">
+    <div class=" card-header">
+        <h5>Lista De Empleados</h5>
+    </div>
+    <div class=" card-body">
+        <a class=" btn btn-success btn-sm" asp-action="Detalle_Producto" asp-controller="Home">crear nuevo</a>
+        <hr />
+        <table class=" table table-striped">
+            <thead>
+                
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Categoria</td>
+                        <td>@item.Precio</td>
+                        <td>
+                            <a class=" btn btn-primary btn-sm" asp-action="Detalle_Producto" asp-controller="Home" asp-route-Id="@item.Id">editar</a>
+                            <a class=" btn btn-danger btn-sm" asp-action="Eliminar" asp-controller="Home" asp-route-Id="@item.Id">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
