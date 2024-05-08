@@ -1,2 +1,2 @@
 # CRUD.NET
-CRUD hecho con entity framework .net
+CRUD done whit ASP.NET,BLAZOR PAGES,ENTITY FRAMEWORK CODE FIRST 
